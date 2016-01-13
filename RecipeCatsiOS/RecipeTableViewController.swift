@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  RecipeTableViewController.swift
 //  RecipeCatsiOS
 //
 //  Created by FumikoIshizawa on 2016/01/13.
@@ -8,23 +8,14 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class RecipeTableViewController: UITableViewController {
     @IBOutlet private var registerTableView: UITableView!
     private let registerViewDataSource = RegisterViewDataSource()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerTableView.dataSource = registerViewDataSource
         registerTableView.delegate = registerViewDataSource
         registerViewDataSource.prepareforUseTableView(registerTableView)
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-

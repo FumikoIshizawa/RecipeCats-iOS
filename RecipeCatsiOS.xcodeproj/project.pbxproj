@@ -15,6 +15,10 @@
 		9E7D7C251C4615FC0094436B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D7C231C4615FC0094436B /* LaunchScreen.storyboard */; };
 		9E7D7C301C4615FC0094436B /* RecipeCatsiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D7C2F1C4615FC0094436B /* RecipeCatsiOSTests.swift */; };
 		9E7D7C3B1C4615FC0094436B /* RecipeCatsiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D7C3A1C4615FC0094436B /* RecipeCatsiOSUITests.swift */; };
+		9E7D7C4B1C4616D40094436B /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D7C491C4616D40094436B /* RecipeTableViewCell.swift */; };
+		9E7D7C4C1C4616D40094436B /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D7C4A1C4616D40094436B /* RecipeTableViewCell.xib */; };
+		9EDA6EEB1C464D2E00B075B6 /* RegisterViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA6EEA1C464D2E00B075B6 /* RegisterViewDataSource.swift */; };
+		9EDA6EED1C4652A800B075B6 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA6EEC1C4652A800B075B6 /* RecipeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		9E7D7C361C4615FC0094436B /* RecipeCatsiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeCatsiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7D7C3A1C4615FC0094436B /* RecipeCatsiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCatsiOSUITests.swift; sourceTree = "<group>"; };
 		9E7D7C3C1C4615FC0094436B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E7D7C491C4616D40094436B /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeTableViewCell.swift; path = UI/RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		9E7D7C4A1C4616D40094436B /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecipeTableViewCell.xib; path = UI/RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		9EDA6EEA1C464D2E00B075B6 /* RegisterViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewDataSource.swift; path = DataSource/RegisterViewDataSource.swift; sourceTree = "<group>"; };
+		9EDA6EEC1C4652A800B075B6 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +107,11 @@
 		9E7D7C171C4615FB0094436B /* RecipeCatsiOS */ = {
 			isa = PBXGroup;
 			children = (
+				9EDA6EE91C464CF100B075B6 /* DataSource */,
+				9E7D7C481C46165E0094436B /* UI */,
 				9E7D7C181C4615FC0094436B /* AppDelegate.swift */,
 				9E7D7C1A1C4615FC0094436B /* FirstViewController.swift */,
+				9EDA6EEC1C4652A800B075B6 /* RecipeTableViewController.swift */,
 				9E7D7C1C1C4615FC0094436B /* SecondViewController.swift */,
 				9E7D7C1E1C4615FC0094436B /* Main.storyboard */,
 				9E7D7C211C4615FC0094436B /* Assets.xcassets */,
@@ -126,6 +137,23 @@
 				9E7D7C3C1C4615FC0094436B /* Info.plist */,
 			);
 			path = RecipeCatsiOSUITests;
+			sourceTree = "<group>";
+		};
+		9E7D7C481C46165E0094436B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9E7D7C491C4616D40094436B /* RecipeTableViewCell.swift */,
+				9E7D7C4A1C4616D40094436B /* RecipeTableViewCell.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		9EDA6EE91C464CF100B075B6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				9EDA6EEA1C464D2E00B075B6 /* RegisterViewDataSource.swift */,
+			);
+			name = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +263,7 @@
 				9E7D7C251C4615FC0094436B /* LaunchScreen.storyboard in Resources */,
 				9E7D7C221C4615FC0094436B /* Assets.xcassets in Resources */,
 				9E7D7C201C4615FC0094436B /* Main.storyboard in Resources */,
+				9E7D7C4C1C4616D40094436B /* RecipeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +291,9 @@
 				9E7D7C1D1C4615FC0094436B /* SecondViewController.swift in Sources */,
 				9E7D7C191C4615FC0094436B /* AppDelegate.swift in Sources */,
 				9E7D7C1B1C4615FC0094436B /* FirstViewController.swift in Sources */,
+				9EDA6EED1C4652A800B075B6 /* RecipeTableViewController.swift in Sources */,
+				9EDA6EEB1C464D2E00B075B6 /* RegisterViewDataSource.swift in Sources */,
+				9E7D7C4B1C4616D40094436B /* RecipeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +518,7 @@
 				9E7D7C411C4615FC0094436B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E7D7C421C4615FC0094436B /* Build configuration list for PBXNativeTarget "RecipeCatsiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +527,7 @@
 				9E7D7C441C4615FC0094436B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E7D7C451C4615FC0094436B /* Build configuration list for PBXNativeTarget "RecipeCatsiOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +536,7 @@
 				9E7D7C471C4615FC0094436B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
