@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96V-b4-Jwm">
@@ -25,8 +25,11 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="にくじゃがにくじゃがにくじゃが" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLP-F1-486">
-                                <rect key="frame" x="15" y="20" width="240" height="22"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <rect key="frame" x="15" y="20" width="260" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="hoW-up-eGD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -36,16 +39,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvw-cO-8sw">
+                                <rect key="frame" x="0.0" y="0.0" width="290" height="170"/>
+                                <connections>
+                                    <action selector="cellButtonTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3yc-gV-yKZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qvw-cO-8sw" secondAttribute="trailing" id="H4K-IA-IEj"/>
                             <constraint firstItem="RMw-oR-Jbe" firstAttribute="leading" secondItem="jyN-J0-uPe" secondAttribute="trailing" constant="15" id="Jaw-wq-ME0"/>
+                            <constraint firstItem="Qvw-cO-8sw" firstAttribute="top" secondItem="96V-b4-Jwm" secondAttribute="top" id="WVl-bG-4Nf"/>
                             <constraint firstAttribute="trailing" secondItem="RMw-oR-Jbe" secondAttribute="trailing" constant="15" id="fGp-cf-cBD"/>
                             <constraint firstItem="SLP-F1-486" firstAttribute="top" secondItem="96V-b4-Jwm" secondAttribute="top" constant="20" id="h0l-rz-IO9"/>
                             <constraint firstItem="RMw-oR-Jbe" firstAttribute="top" secondItem="jyN-J0-uPe" secondAttribute="top" id="inE-nd-JXw"/>
                             <constraint firstItem="RMw-oR-Jbe" firstAttribute="bottom" secondItem="jyN-J0-uPe" secondAttribute="bottom" id="jDg-sk-8Qr"/>
                             <constraint firstItem="jyN-J0-uPe" firstAttribute="leading" secondItem="96V-b4-Jwm" secondAttribute="leading" constant="15" id="k6H-Y4-eFM"/>
+                            <constraint firstAttribute="bottom" secondItem="Qvw-cO-8sw" secondAttribute="bottom" id="ol5-LK-hQ4"/>
                             <constraint firstItem="SLP-F1-486" firstAttribute="leading" secondItem="96V-b4-Jwm" secondAttribute="leading" constant="15" id="ooE-1W-mpf"/>
+                            <constraint firstItem="Qvw-cO-8sw" firstAttribute="leading" secondItem="96V-b4-Jwm" secondAttribute="leading" id="uj8-p9-luG"/>
                             <constraint firstItem="RMw-oR-Jbe" firstAttribute="top" secondItem="SLP-F1-486" secondAttribute="bottom" constant="13" id="xfX-YV-592"/>
                             <constraint firstAttribute="bottom" secondItem="jyN-J0-uPe" secondAttribute="bottom" constant="15" id="yDr-9S-Xw5"/>
                         </constraints>
@@ -63,6 +76,11 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.94954202586206893" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="recipeContentLabel" destination="RMw-oR-Jbe" id="cb7-0S-ul5"/>
+                <outlet property="recipeImageView" destination="jyN-J0-uPe" id="clh-qd-5pP"/>
+                <outlet property="recipeTitleLabel" destination="SLP-F1-486" id="gHn-6z-v21"/>
+            </connections>
             <point key="canvasLocation" x="347" y="422"/>
         </tableViewCell>
     </objects>
