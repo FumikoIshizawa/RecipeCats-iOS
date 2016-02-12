@@ -50,6 +50,9 @@ struct GetRecipeListRequest: RecipeCatsRequestType {
 
 struct PostRecipeRequest: RecipeCatsRequestType {
     typealias Response = Recipe
+    var title: String = ""
+    var url: String = ""
+    var category: Int = 0
     
     var path: String {
         return "recipe/"
@@ -59,4 +62,7 @@ struct PostRecipeRequest: RecipeCatsRequestType {
         return .POST
     }
     
+    var parameters: [String : AnyObject] {
+        return ["title": title, "url": url, "category": category]
+    }
 }

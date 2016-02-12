@@ -99,6 +99,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButtonTouchUpInside:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="LmJ-5N-zrW"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録に成功！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLK-O1-l0y">
                                 <rect key="frame" x="0.0" y="304" width="300" height="44"/>
@@ -154,6 +157,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="addedRecipeLabel" destination="YLK-O1-l0y" id="Nfz-YA-fGR"/>
+                        <outlet property="recipeTitleTextField" destination="uyg-JA-5xL" id="OTy-cu-ls7"/>
+                        <outlet property="recipeUrlTextField" destination="bwo-V1-bhO" id="Cnb-kW-nei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
